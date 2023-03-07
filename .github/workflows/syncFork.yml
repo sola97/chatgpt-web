@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@master
       with:
         fetch-depth: 100  # greater than the number of commits you made
+        token: ${{ secrets.GH_TOKEN }}
     - uses: imba-tjd/rebase-upstream-action@master
       with:  # all args are optional
         upstream: Chanzhaoyu/chatgpt-web
